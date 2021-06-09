@@ -1,0 +1,557 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jan 28, 2019, 4:41:45 AM
+    Author     : User
+*/
+
+$red: #EE1E3D;
+$lightRed: #d14f42;
+$cofee: #5d221a;
+$lightCofee: #a1473e;
+$yellow: #f6a144;
+
+.bg_red {
+  background: $red;
+}
+
+.bg_lightRed {
+  background: $lightRed;
+}
+
+.bg_cofee {
+  background: $cofee;
+}
+
+.bg_lightCofee {
+  background: $lightCofee;
+}
+
+.bg_yellow {
+  background: $yellow;
+}
+
+.bg_gray {
+  background: #bdbec0;
+}
+
+.bg_gray_dark {
+  background: #58595B;
+}
+
+.bg_black {
+  background: #000000;
+}
+
+.text_gray {
+  color: #818284;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.main_navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: all .25s;
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 15px;
+        color: white;
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      &.active {
+        .nav-link {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    &:hover {
+      color: white;
+    }
+  }
+
+  .nav-social {
+    &.navbar-nav {
+      margin-right: 20px;
+      line-height: 17px;
+
+      .nav-item {
+        .nav-link {
+          font-size: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .fab {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main_slider {
+  background: black;
+  position: relative;
+  overflow: hidden;
+
+  .carousel-inner {
+    .carousel-item {
+      > img {
+        opacity: .3;
+        min-width: 100%;
+        min-height: 75%;
+        width: 100%;
+      }
+    }
+
+    .carousel-caption {
+      left: 0;
+      right: 0;
+      top: 150px;
+
+      h5 {
+        color: black;
+      }
+    }
+  }
+
+  .logo_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 170px;
+    bottom: 0;
+    z-index: 2;
+
+    .d-table-cell {
+      .line {
+        width: 1px;
+        border: 1px dashed white;
+        margin: 0px 0 0 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .business_text {
+        font-size: 15px;
+        max-width: 400px;
+        text-align: justify;
+        margin-bottom: 0;
+
+        &.home {
+          margin-top: 10px;
+        }
+
+        .view_more_link {
+          color: $red;
+        }
+      }
+    }
+
+    img {
+      width: 300px;
+      margin-right: 5px;
+
+      &.about_logo {
+        margin-top: 15px;
+      }
+
+      &.contact_logo {
+        margin-top: 15px;
+      }
+    }
+
+    .container {
+      max-width: 780px;
+
+      > .row {
+        position: relative;
+      }
+    }
+  }
+
+}
+
+.carousel-fade {
+  .carousel-item {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .75s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.boxes {
+  &.fixed_bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+
+    .item {
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 30px 0;
+        color: white;
+        position: relative;
+
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          left: 0;
+          right: 0;
+          top: 0;
+          margin: auto;
+          border-top: 15px solid black;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+        }
+      }
+
+      &.active {
+        background: white !important;
+
+        a {
+          position: relative;
+          color: black;
+
+          &::before {
+            border-top: 15px solid #ff1200;
+          }
+        }
+      }
+    }
+  }
+
+  .item {
+    font-size: 25px;
+    vertical-align: middle;
+    line-height: 27px;
+    background: white;
+
+    a {
+      color: white;
+
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      color: black;
+      background: white;
+    }
+
+    &.bg_gray_dark {
+      background: #424556;
+    }
+
+    &.bg_cofee {
+      background: $cofee;
+    }
+
+    &.bg_lightCofee {
+      background: $lightCofee;
+    }
+
+    &.bg_lightRed {
+      background: $lightRed;
+    }
+
+    &.bg_yellow {
+      background: $yellow;
+    }
+  }
+}
+
+.links {
+  padding: 65px 0 65px 0;
+
+  .accordion {
+    .card {
+      background: none;
+      border: 0;
+
+      .card-header {
+        background: none;
+        border-bottom: 1px solid gray;
+        padding: .3rem 0;
+        margin-bottom: initial;
+
+        h2 {
+          button {
+            font-size: 25.5px;
+            color: black;
+            padding: 0;
+
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .card-body {
+        background: #d4d4d5;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 83px 0 0 0;
+  font-size: 13px;
+  color: #808285;
+  line-height: 19px;
+
+  a {
+    color: #808285;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .footer_last {
+    color: black;
+    margin-top: 73px;
+  }
+
+  .footer_social {
+    font-size: 20px;
+
+    li {
+      margin-bottom: 4px;
+
+      a {
+        display: block;
+        padding: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.banner_content {
+  margin-top: 200px;
+}
+
+.business_plan {
+  padding: 0 0 80px 0;
+  background: #e6e7e9;
+
+  .heading {
+    background: #e6e7e9;
+    padding-top: 80px;
+
+    &:hover {
+      background: #bdbec0;
+    }
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    background: rgba(0, 0, 0, .8);
+    color: white;
+    border-radius: 0;
+    border-color: white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    .modal-header {
+      background: #737475;
+      color: black;
+      border-radius: 0;
+      border: 0;
+      padding: 5px 15px;
+    }
+  }
+}
+
+.success_stories {
+  margin-top: 20px;
+}
+
+.contact_us {
+  background: #e6e7e9;
+  padding: 80px 0;
+}
+
+
+.box_tab {
+  text-align: center;
+  background: #424556;
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #f6a144;
+  }
+
+  .nav {
+    .nav-item {
+      width: 20%;
+      text-decoration: none;
+      display: block;
+      padding: 70px 10px;
+      color: white;
+      position: relative;
+      font-size: 20px;
+      line-height: 27px;
+      border: 0;
+      border-radius: 0;
+      transition: all .5s;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        transition: all .5s;
+        content: ' ';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        border-top: 15px solid black;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+      }
+
+      &.active {
+        background: white;
+        color: black;
+        z-index: 2;
+
+        &::before {
+          border-top: 15px solid #ff1200;
+        }
+      }
+
+      &:hover {
+        z-index: 2;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.form-inline {
+  .form-control {
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+.team {
+  .main_slider {
+    background: black;
+  }
+
+  .team_content {
+    text-align: justify;
+
+    .item {
+      margin-bottom: 30px;
+    }
+
+    .member_image {
+      padding: 5px;
+      border: 1px dashed #939598;
+      margin-top: 23px;
+    }
+
+    background: #e6e7e9;
+    padding: 80px 0;
+
+    h3 {
+      font-size: 16px;
+      color: #4D4D4D;
+      border-bottom: 1px solid white;
+      max-width: 350px;
+      padding-bottom: 10px;
+
+      .name {
+        color: black;
+      }
+    }
+
+    p {
+      line-height: 20px;
+      font-size: 14px;
+    }
+
+    .left_blank_space {
+      -ms-flex: 0 0 22%;
+      flex: 0 0 22%;
+      max-width: 22%;
+    }
+  }
+
+  .picture_col {
+    -ms-flex: 0 0 19.666667%;
+    flex: 0 0 19.666667%;
+    max-width: 19.666667%;
+  }
+}
+
+.card {
+  border-radius: 0;
+  border-bottom: 3px solid #007bff;
+
+  .card-img {
+    border-radius: 0;
+  }
+}
+
+.btn {
+  border-radius: 0;
+}

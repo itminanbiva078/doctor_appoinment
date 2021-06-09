@@ -1,0 +1,263 @@
+@media screen and (max-width: 1199px){
+    footer{
+        .text_gray{
+            .container{
+                width:45%;
+            }
+        }
+    }
+}
+@media screen and(max-width:1024px){
+    .main_slider{
+        max-height: 650px;
+    }
+}
+@media screen and(max-width:991px){
+    .navbar-collapse{
+        padding: 0 10px;
+        background: rgba(0,0,0,.85);
+    }
+    .navbar-light{
+        .navbar-brand{
+            color:white;
+        }
+        .navbar-toggler{
+            border: 0;
+            &:focus{
+                outline:none;
+            }
+            .icon-bar{
+                width:28px;
+                .bar{
+                    display: block;
+                    background: white;
+                    height: 2px;
+                    margin-bottom: 8px;
+                    transition:all .25s;
+                    &:nth-child(1){
+                        transform: rotate(-45deg);
+                        transform-origin: right bottom;
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        transform: rotate(45deg);
+                        transform-origin: right top;
+                    }
+                }
+            }
+            &.collapsed{
+                .icon-bar{
+                    .bar{
+                        &:nth-child(1){
+                            transform: rotate(0deg);
+                        }
+                        &:nth-child(2){
+                            opacity: 1;
+                        }
+                        &:nth-child(3){
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main_slider .logo_container .d-table-cell .business_text{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .box_tab .nav .nav-item{
+        padding:50px 10px;
+    }
+
+    .main_navbar {
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    padding-left: 0;
+                    padding-right:0;
+                }
+            }
+            &.nav-social{
+                display: block;
+                li{
+                    display:inline-block;
+                    .nav-link{
+                        display:block;
+                        padding:10px;
+                    }
+                }
+            }
+        }
+        .form-inline .form-control{
+            display: inline-block;
+            width:calc(100% - 50px);
+        }
+    }
+
+    .boxes{
+        .item{
+            font-size:19px;
+            line-height: 22px;
+        }
+    }
+    .links{
+        font-size:22px;
+    }
+
+    footer{
+        .text_gray{
+            .container{
+                width:55%;
+            }
+        }
+    }
+    .box_tab .nav .nav-item{
+        font-size:22px;
+    } 
+    .main_slider .logo_container{
+        top:100px;
+        img{
+            width:250px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .team .team_content h3{
+        margin-top: 0px;
+    }
+    .logo_container{
+        .logo{
+            text-align: center !important;
+        }
+    }
+    p,ul,li{
+        font-size:14px;
+    }
+    .boxes{
+        .item{
+            font-size:16px;
+            line-height: 21px;
+        }
+        &.fixed_bottom{
+            bottom:0;
+            top:initial;
+            .nav{
+                .nav-item{
+                    width: 20%;
+                    //padding:15px 10px;
+                    font-size:17px;
+                    line-height:21px;
+                    br{
+                        display: none;
+                    }
+                    &::before{
+                        border-width: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .main_slider .carousel-inner .carousel-item > img{
+        width:auto;
+        min-width: 110%;
+        margin-left: -5%;
+        min-height: 75%;
+        height:calc(100% - 140px);
+    }
+    .links{
+        font-size:18px;
+    }
+    .main_slider .logo_container img{
+        width:200px;
+    }
+    .main_slider .logo_container{
+        top:180px;
+    }
+
+    footer{
+        .text_gray{
+            .container{
+                width:75%;
+            }
+        }
+    }
+    .main_slider .logo_container .d-table-cell .business_text{
+        letter-spacing: 8px;
+    }
+    .links .accordion .card .card-header h2{
+        line-height:15px;
+        button{
+            font-size: 15.5px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    .main_slider .carousel-inner .carousel-item > img{
+        max-width: 250%;
+        margin-left: -70%;
+        width: auto;
+    }
+    .boxes.fixed_bottom .nav .nav-item{
+        width:100%;
+        padding: 15px 0;
+    }
+    .links{
+        font-size:16px;
+    }
+
+    footer{
+        .text_gray{
+            .container{
+                width:100%;
+            }
+        }
+        .footer_row{
+            display: block;
+            .item{
+                width:100%;
+                max-width:100%;
+                display: block;
+                margin-bottom: 30px;
+                .footer_social{
+                    text-align: left !important;
+                    li{
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+        .footer_last{
+            .item{
+                text-align:center !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 768px) and (orientation: portrait) {
+    .main_slider .carousel-inner .carousel-item > img{
+        width: 200%;
+        margin-left: -50%;
+        min-height: 95%;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .main_slider .logo_container{
+        top:120px;
+    }
+    .box_tab .nav .nav-item{
+        padding:20px 10px;
+    }
+    .main_slider .carousel-inner .carousel-item > img{
+        width:100%;
+        height:auto;
+    }
+}
